@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pattern Generator</title>
+</head>
+<body>
+
+	<script >
+		/*write a program to display the following pattern
+   *
+   * *
+   * * *
+   * * * *
+   and also write to display
+   + + + + +
+   - - - -
+   + + +
+   - -
+   +
+
+  Display the following pattern
+   10
+   11 12
+   13 14 15
+   16 17 18 19
+
+   and also write to display  
+
+   75 74 73 72 71
+   70 69 68 67
+   66 65 64
+   63 62
+   61*/
+
+
+
+		var row=parseInt(prompt('Enter number of rows')); /*Take the input from user and conver into numbers*/
+		var col=parseInt(prompt('Enter number of columns'));
+		var num=parseInt(prompt('Enter number to start'));
+		var i;
+		var j;
+		function Pattern_Gen(r,c){
+			for(i=1;i<=r;i++){
+				for(j=1;j<=i;j++){
+					document.write('* ')
+				}
+				document.write("<br>")
+			}
+		}Pattern_Gen(row,col)
+
+		document.write('<br>')
+
+		document.write('The next Patttern is',)
+		document.write('<br>')
+		document.write('<br>')
+
+		function Pattern_Gen1(r,c){
+			for(i=r;i>=1;i--){
+				for(j=1;j<=i;j++){
+					if(i%2==1){
+						document.write('+ ')
+					}else{
+						document.write('-  ')
+					}
+					
+				}document.write("<br>")
+			}
+		}Pattern_Gen1(row,col) 
+
+		document.write('<br>')
+
+		document.write('Next patter Generator')
+		document.write('<br>')
+		document.write('<br>')
+
+		function Pattern_Gen3(r,c,n){
+			
+			for(i=1;i<=r;i++){
+				for(j=1;j<=i;j++){
+					document.write(" ",n)
+					n++
+				}
+				document.write("<br>")
+			}
+		}Pattern_Gen3(row,col,num)
+
+		document.write('<br>')
+
+		document.write('Next patter Generator')
+		document.write('<br>')
+		document.write('<br>')
+
+		function Pattern_Gen4(r,c,n){
+			
+			for(i=r;i>=1;i--){
+				for(j=1;j<=i;j++){
+					document.write(" ",n)
+					n--
+				}
+				document.write("<br>")
+			}
+		}Pattern_Gen4(row,col,num)
+
+	</script>
+
+</body>
+</html>

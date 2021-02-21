@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array operations</title>
+</head>
+<body>
+	<script>
+      /*   given  var a = [15,14,18,20,8,25,199,200,55,45,3,200]
+   find how many numbers are multiples of 5 as well as 8
+   how many numbers are perfect square 
+   (example of perfect square is 16 which is 4x4 or 25 which is 5x5 etc)
+   sort the array (not using the built-in method) and display the sorted array  (you could try bubble sort)*/
+
+		var a=[15,14,18,20,8,25,199,55,45,3,200]
+		var i;
+		var divisible_count=0;
+		var perfect_sq_count=0;
+		var j;
+		function multipy_of_5_8(arr){
+			for (i=0;i<=arr.length;i++){
+				if((arr[i] % 5==0) && (arr[i] % 8==0)){
+					divisible_count++
+					document.write('divisible by 5 and 8 is ',arr[i])
+					document.write('<br>')
+				}
+				for (j=2;j<=a[i]/2;j++){
+					if(j*j === a[i]){
+						perfect_sq_count++
+                        document.write('perfect square is ',a[i])
+                        document.write('<br>')
+                    }
+
+                }
+    
+
+			}document.write('count of numbers divisible by 5 and 8 is ', divisible_count , ' and the count of the Perfect square is ', perfect_sq_count)
+		}multipy_of_5_8(a)
+
+		
+		document.write('<br>')
+		document.write('<br>')
+
+		function sorting_array(arr){
+			for(i=0;i<=arr.length;i++){
+				for(j=0;j<arr.length;j++){
+					if(a[i]<a[j]){
+						var swap;
+						swap=a[i]
+						a[i]=a[j]
+						a[j]=swap
+
+					}
+				}
+			}document.write('The sorted array is ',a)
+		}sorting_array(a)
+
+
+	</script>
+
+</body>
+</html>

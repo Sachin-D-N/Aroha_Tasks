@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Decimal to Binary Converter</title>
+</head>
+<body>
+	<script >
+
+		/*var a = 125
+   convert it to binary and display
+   the output is 1111101*/
+		var a = parseInt(prompt('Enter the number to convert'))
+		var rem;
+		var bin=''
+		var bin1='';
+		var i;
+		function dec_to_bin(num){
+			while(num>0){
+				rem=num%2;
+				str=rem.toString()
+				bin+=str
+				num=parseInt(num/2);
+			}
+
+			for(i=bin.length;i>=0;i--){
+					bin1+= bin[i]
+		    }
+			document.write('The converted Binary number is ',bin1)
+		}dec_to_bin(a)
+	</script>
+
+</body>
+</html>

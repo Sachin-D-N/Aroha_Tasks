@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prime Number Generator</title>
+	<h3>Prime Number Couter</h3>
+</head>
+<body>
+	<script >
+		/* find all the prime numbers in the range of 100 to 700
+   stop  processing the number range,
+   the moment your prime number count reaches 10  
+   if the count is not reached 10 then continue processing the range 
+   of the number.*/
+		var count=0;
+		var prime_num=[]
+		var first_num=parseInt(prompt('Enter the range of first number'))
+		var last_num=parseInt(prompt('Enter the range of last numer'))
+		var i;
+		var j;
+		
+
+		function prime_gen(a,b){
+			
+				for(i=a;i<b;i++){
+					for(j=2;j<i/2;j++){
+						if (i%j == 0){
+							break
+						}
+					}	
+					if(i%j !=0){
+						prime_num.push(i)
+						count++
+						if (count==10){
+							break
+
+						}
+						
+					}
+					
+
+				}
+			
+			document.write('The prime numers between '+a+' and '+b+' are '+prime_num)
+		}prime_gen(first_num,last_num)
+
+	</script>
+
+</body>
+</html>

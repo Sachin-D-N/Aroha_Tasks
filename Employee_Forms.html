@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Task</title>
+</head>
+
+<body>
+    <form>
+        <table>
+            <div>
+              <tr>
+                <td>User name:</td>
+                <td><input type="text" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+                <td>City of <br> Employment:</td>
+                <td><input type="text" id="fname" name="fname"></td>
+            </tr>
+            <tr>
+
+                <td>Web server:</td>
+                <td>
+                    <select id="cars" name="cars">
+                        <option value="volvo"> -- Choose a Server --</option>
+                        <option value="saab">IIS</option>
+                        <option value="fiat">NGINX</option>
+                        <option value="audi">Apache Tomcat</option>
+                    </select>
+                </td>
+
+            </tr>  
+            </div>
+            <div ">
+             <tr>
+                <td rowspan="4">
+                    <label for="cars">Please specify <br> your role:</label>
+                </td>
+                <td ><input type="radio" id="role" name="role" value="role"> Admin </td>
+            <tr>
+
+                <td><input type="radio" id="role" name="role" value="role"> Engineer</td>
+
+            </tr>
+            <tr>
+
+                <td><input type="radio" id="role" name="role" value="role"> Manager </td>
+
+            </tr>
+            <tr>
+
+                <td><input type="radio" id="role" name="role" value="role"> Guest</td>
+
+            </tr>
+
+            </tr>   
+            </div>
+
+            <tr>
+                <td rowspan="3"><label for="cars">Single Sign-on <br> to the following:</label><br></td>
+                <td><input type="checkbox" id="sign"> Mail</td>
+            <tr>
+                <td><input type="checkbox" id="sign">Playroll</td>
+
+            </tr>
+            <tr>
+
+                <td><input type="checkbox" id="sign">Self-service</td>
+
+            </tr>
+            </tr>
+        </table>
+        <input style="padding-left: 10px; margin-left: 120px; margin-top: 10px" type="submit" value="Login">
+        <input style="margin-left: 3px" type="submit" value="Reset">
+    </form>
+</body>
+
+</html>

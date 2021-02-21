@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse</title>
+</head>
+<body>
+	<script >
+		/*reverse a number (say) var a= 16789
+    output should be 98761
+    find out during reversing how many digits repeat
+    (use switch case)
+    for example if the var b = 5655677885
+    reverse is 5887765565
+    count of 5 is 4
+    count of 8 is 2
+    count of 7 is 2
+    count of 6 is 2
+    and so on*/
+    var a =parseInt(prompt('Enter the number for reverse'))
+    var rem;
+    var reverse=0;
+    var count_1=0;
+    var count_2=0;
+
+
+    function reverse_number(num){
+    	while (num >0){
+    		rem=num % 10;
+    		reverse=(reverse*10)+rem;
+    		num=parseInt(num / 10);
+    		switch(reverse){
+    			case 1:
+    			if(rem==1){
+    				count_1++
+    			}
+    		}
+
+    	}
+    }reverse_number(a)
+    document.write('reversed number is ', reverse)
+
+	</script>
+
+</body>
+</html>
+
